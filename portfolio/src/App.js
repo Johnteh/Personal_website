@@ -1,8 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Portfolio from "./pages/Portfolio";
+
 
 function App() {
   return (
     <>
-    <h2 className='text-2xl bg-red-400'>hello world</h2>
+    <Router>
+      
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        
+      </Routes>
+
+    </Router>
     </>
 
   );
