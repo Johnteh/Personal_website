@@ -81,7 +81,7 @@ export default function Particle() {
 
               },
               random: false,
-              speed: 5,
+              speed: 6,
               straight: false,
             },
             number: {
