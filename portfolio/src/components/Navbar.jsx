@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
  
   return (
-    <div className="bg-white border-b shadow-sm sticky top-0 z-40">
+    <div className="bg-transparent shadow-sm sticky top-0 z-40">
       <div className='flex justify-between md:items-center lg:items-center max-w-3xl  px-3 mx-auto  sm:items-start  sm:justify-betweem'>
         <div className='mt-3'>
           <img src={logo} className="rounded-full h-[100px] cursor-pointer" alt="logo" />
@@ -24,7 +24,7 @@ export default function Navbar() {
           <ul className="hidden  md:flex md:space-x-8  lg:flex lg:space-x-10 ">
             {Links.map((link) => (
               <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7 uppercase font-semibold hover:border-b-red-500'>
-                <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
+                <a href={link.link} className='text-[#ffffff] hover:text-[#ffffff]-400 hover:shadow-lg transition ease-in-out duration-500'>{link.name}</a>
               </li>
 
             ))}
@@ -39,7 +39,7 @@ export default function Navbar() {
                 <ul className="md:hidden lg:hidden sm:grid-cols-2">
                   {Links.map((link) => (
                     <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7  uppercase font:semibold '>
-                      <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
+                      <a href={link.link} className='text-[#ffffff] hover:text-[#ffffff]-400 hover:shadow-lg transition ease-in-out duration-500'>{link.name}</a>
                     </li>
 
                   ))}
