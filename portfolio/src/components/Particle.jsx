@@ -19,6 +19,7 @@ export default function Particle() {
       await console.log(container);
     }, []);
 
+  
 
   return (
     <>
@@ -29,10 +30,11 @@ export default function Particle() {
         options={{
           background:{
             color:{
-              value:"rgb(10, 10, 25)",
+              value:"",
 
             },
           },
+        
           fpsLimit:120,
           interactivity:{
             events:{
@@ -63,12 +65,12 @@ export default function Particle() {
           },
           particles: {
             color: {
-              value: "ffffff",
+              value: "#ffffff",
             },
             links: {
               color: "#FF9800",
               distance: 150,
-              enable:true,
+              enable:false,
               opacity:0.5,
               width:1,
 
@@ -81,7 +83,7 @@ export default function Particle() {
 
               },
               random: false,
-              speed: 6,
+              speed: 2,
               straight: false,
             },
             number: {
@@ -97,14 +99,14 @@ export default function Particle() {
 
             },
             shape: {
-              type: "circle",
+              type: "star",
 
             },
             size: {
               value: { min: 1, max: 5 },
 
             },
-            detectRetina: true,
+            detectRetina: false,
 
 
 

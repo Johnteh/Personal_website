@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import logo from "/home/vagrant/PORTFOLIO/Personal_website/portfolio/src/assets/logo.png";
 import { FaBars } from "react-icons/fa";
-import profile from "/home/vagrant/PORTFOLIO/Personal_website/portfolio/src/assets/profile.jpg";
+import { MdOutlineClose } from "react-icons/md";
+
 
 export default function Navbar() {
   const Links = [
@@ -9,50 +10,53 @@ export default function Navbar() {
     { name: "about", link: "/" },
     { name: "portfolio", link: "/" },
     { name: "skills", link: "/" },
-    { name: "contact", link: "/" },
-
+   
   ];
   const [open, setOpen] = useState(false);
   console.log(open);
  
   return (
     <>
-      <div className="bg-transparent shadow-sm sticky top-0 z-40">
-        <div className='flex justify-between items-center lg:items-center max-w-3xl  px-3  mx-auto sm:items-start  sm:justify-betweem'>
-          <div className='mt-3 '>
-            <img src={logo} className="rounded-full h-[100px] cursor-pointer" alt="logo" />
+      <div className="sticky top-0 z-40">
+        <div className='flex justify-between items-center md:flex  md:justify-between md:items-center lg:justify-between lg:items-center max-w-3xl mx-auto'>
+          <div className='mt-3 ml-4 rounded-full overflow-hidden'>
+            <img src={logo} className=" h-[100px] w-[100px] cursor-pointer" alt="logo" />
 
           </div>
           <>
-            <ul className=" hidden md:flex md:space-x-8  lg:flex lg:space-x-10 ">
+            <ul className=" hidden md:flex md:space-x-6  lg:flex lg:space-x-8 xl:space-x-10 ">
               {Links.map((link) => (
-                <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7 uppercase font-semibold hover:border-b-red-500'>
-                  <a href={link.link} className='text-[#ffffff] hover:text-[#ffffff]-400 hover:shadow-lg transition ease-in-out duration-500'>{link.name}</a>
+                <li key={link.name} className='text-xl  uppercase font-semibold text-white 
+                border-b-4 border-red-700 hover:text-[#c026d3] hover:font-semibold transition ease-in-out duration-500'>
+                  <a href={link.link} className=''>{link.name}</a>
                 </li>
 
               ))}
 
             </ul>
           </>
-          
-          
-          <div className='mr-20 sm:mt-6 relative lg:mr-0 md:mr-0'>
-            <div>
+          <div  className='mr-10'>
               <button
-                  onClick={() => setOpen(!open)} className='text-3xl   cursor-pointer md:hidden lg:hidden'>
-                  <p className='bg-[#FF9800] hover:shadow-lg transition-ease-in-out cursor-pointer'>
-                    <FaBars className='text-2xl font-semibold rounded-full ' />
-                  </p>
+                  onClick={() => setOpen(!open)} className='cursor-pointer md:hidden lg:hidden'>
+                  <>
+                  {!open ?
+                    <FaBars className='text-3xl text-[#FF9800] font-semibold rounded-2xl ' />
+                    :
+                    <MdOutlineClose className='text-3xl text-[#FF9800]'/>
+                  }
+                  </>
+
+                  
               </button>
 
-            </div>
-            
-            <div className='absolute'>
+          </div>
+          <div className='fixed top-10 right-20'>
               {open && (
-                <ul className="md:hidden lg:hidden grid-cols-auto">
+                <ul className="md:hidden lg:hidden border-l  border-[#FF9800] duration-500 transition ease-in-out bg-[rgb(10,10,25)]">
                   {Links.map((link) => (
-                    <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7 uppercase font-semibold hover:border-b-red-500'>
-                      <a href={link.link} className='text-[#ffffff] hover:text-[#ffffff]-400 hover:shadow-lg transition ease-in-out duration-500'>{link.name}</a>
+                    <li key={link.name} className='text-xl uppercase font-semibold text-white hover:text-[#c026d3] transition ease-in-out duration-500
+                    m-3 border-b-4 border-red-600 '>
+                      <a href={link.link} className=''>{link.name}</a>
                     </li>
 
                   ))}
@@ -61,10 +65,12 @@ export default function Navbar() {
               )}
 
           </div>
-        </div>
-      </div>
-      <div className="grid place-items-center">
-            <img src={profile} className="rounded-full h-[300px]  cursor-pointer " alt="logo" />
+          
+          
+          
+            
+            
+            
         </div>
       </div>
       

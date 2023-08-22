@@ -4,16 +4,17 @@ import Header from '../components/Header';
 
 export default function Portfolio() {
   return (
-    <div>
-      <Header />
+    <>
+      <Header className="mb-4"/>
       
       
+    </> 
       
 
      
       
       
         
-    </div>
+    
   )
 }
