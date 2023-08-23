@@ -21,19 +21,24 @@ export default function Particle() {
 
   
 
+  
+
   return (
     <>
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
+        height="60px"
         options={{
           background:{
             color:{
               value:"",
 
             },
+           
           },
+
         
           fpsLimit:120,
           interactivity:{

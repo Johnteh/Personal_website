@@ -13,7 +13,9 @@ export default function Header() {
     <section className='relative h-[88vh] md:h-[88vh]  w-[100%]  bg-gradient-to-r  from-[rgb(10,10,25)]   to-indigo-500 top-o'>
      
       
-      <Particle className="absolute overflow-hidden"/>
+      <div className='  overflow-hidden'>
+        <Particle className=""/>
+      </div>
 
       
      

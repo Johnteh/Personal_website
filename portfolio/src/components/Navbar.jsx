@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 
 
+
 export default function Navbar() {
   const Links = [
     { name: "home", link: "/" },
@@ -18,6 +19,7 @@ export default function Navbar() {
   return (
     <>
       <div className=' top-0 z-50  bg-gradient-to-r  to-indigo-500 from-[rgb(10,10,25)]    sticky'>
+      
         <div className='flex justify-between  items-center md:flex  md:justify-between md:items-center lg:justify-between lg:items-center max-w-3xl mx-auto '>
           <div className='mt-3 ml-4 rounded-full overflow-hidden  '>
             <img src={logo} className=" h-[100px] w-[100px] cursor-pointer" alt="logo" />

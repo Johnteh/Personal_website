@@ -11,15 +11,22 @@ export default function Portfolio() {
    
     <body>
      
-     <Navbar className=""/>
+      <Navbar className=""/>
       <Header className="  "/>
+      <main>
+        
+        <About className=' py-8 px-6' />
+
+      </main>
+     
       
      
 
     
       
       
-      <About className=' py-8 px-6' />
+      
+      
 
     </body>
    
