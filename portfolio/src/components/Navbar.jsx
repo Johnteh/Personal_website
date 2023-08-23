@@ -17,9 +17,9 @@ export default function Navbar() {
  
   return (
     <>
-      <div className="sticky top-0 z-40">
-        <div className='flex justify-between items-center md:flex  md:justify-between md:items-center lg:justify-between lg:items-center max-w-3xl mx-auto'>
-          <div className='mt-3 ml-4 rounded-full overflow-hidden'>
+      <div className=' top-0 z-50  bg-gradient-to-r  to-indigo-500 from-[rgb(10,10,25)]    sticky'>
+        <div className='flex justify-between  items-center md:flex  md:justify-between md:items-center lg:justify-between lg:items-center max-w-3xl mx-auto '>
+          <div className='mt-3 ml-4 rounded-full overflow-hidden  '>
             <img src={logo} className=" h-[100px] w-[100px] cursor-pointer" alt="logo" />
 
           </div>
@@ -50,21 +50,21 @@ export default function Navbar() {
               </button>
 
           </div>
-          <div className='fixed top-10 right-20'>
-              {open && (
-                <ul className="md:hidden lg:hidden border-l  border-[#FF9800] duration-500 transition ease-in-out bg-[rgb(10,10,25)]">
-                  {Links.map((link) => (
-                    <li key={link.name} className='text-xl uppercase font-semibold text-white hover:text-[#c026d3] transition ease-in-out duration-500
-                    m-3 border-b-4 border-red-600 '>
-                      <a href={link.link} className=''>{link.name}</a>
-                    </li>
+         
+          {open && (
+            <ul className="md:hidden lg:hidden border-l  border-[#FF9800] duration-500 transition ease-in-out  bg-gradient-to-r from-[rgb(10,10,25)]- to-indigo-500 fixed top-[110px] right-20 ">
+              {Links.map((link) => (
+                <li key={link.name} className='text-xl uppercase font-semibold text-white hover:text-[#c026d3] transition ease-in-out duration-500
+                m-3 border-b-4 border-red-600 '>
+                  <a href={link.link} className=''>{link.name}</a>
+                </li>
 
-                  ))}
-                  
-                </ul>
-              )}
+              ))}
+              
+            </ul>
+          )}
 
-          </div>
+        
           
           
           

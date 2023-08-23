@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import {AiOutlineArrowDown} from 'react-icons/ai'
 import Particle from './Particle';
 import profile from "/home/vagrant/PORTFOLIO/Personal_website/portfolio/src/assets/profile.jpg";
 import {FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -7,21 +7,24 @@ import {AiFillGithub} from "react-icons/ai";
 import Introduction from './Introduction';
 
 
+
 export default function Header() {
   return (
-    <header className='bg-[rgb(10,10,25)] top-0 left-0 w-[100%] h-[100%] absolute z-1'>
-      <div className='relative w-[100%] '>
-        <Particle className="z-0 "/>
+    <section className='relative h-[88vh] md:h-[88vh]  w-[100%]  bg-gradient-to-r  from-[rgb(10,10,25)]   to-indigo-500 top-o'>
+     
+      
+      <Particle className="absolute overflow-hidden"/>
 
-      </div>
       
      
       
-      <Navbar className=""/>
+     
       
-      <div className='flex justify-around items-center mb-20 sm:mb-14 md:mb-8'>
+     
+      
+      <div className='flex flex-col py-4 sm:flex-row md:flex-row justify-around items-center mb-8 sm:mb-8 md:mb-4'>
 
-        <div className='space-y-3  text-md md:text-2xl text-blue-700 shadow-2xl'>
+        <div className='hidden sm:grid md:grid space-y-3  text-md md:text-2xl text-blue-700 shadow-2xl'>
          <p className='rounded-full border-2 border-gray-700 p-1  cursor-pointer'> <AiFillGithub className="hover:text-blue-400" />
          </p>
          <p  className='rounded-full border-2 border-gray-700 p-1 cursor-pointer'>
@@ -61,14 +64,19 @@ export default function Header() {
 
       </div>
 
-      <Introduction className=" bg-white"/>
+      <Introduction className=""/>
+      <div className='flex justify-center absolute bottom-8 left-[50%] '>
+        <p className='animate-bounce   rounded-full bg-white '>
+          < AiOutlineArrowDown className='text-xl text-red-600 font-bold '/>
+        </p>
+      </div>
       
      
           
 
        
        
-    </header>
+    </section>
      
       
         
